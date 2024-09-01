@@ -1,0 +1,725 @@
+/* Add CSS */
+
+/* STYLE FOR THE MAIN PAGE  */
+
+/* Making grid templay area */
+.Website {
+  display: grid;
+  grid-template-areas:
+    "Header Header Header"
+    "Sidebar Main Main"
+    "Sidebar Main Main";
+  grid-template-rows: auto 1fr 1fr;
+  /* Make the header auto-sized and sidebar/article share the remaining space */
+  height: 500vh;
+  /* Set the main container to fill the viewport height */
+  grid-template-columns: auto 1fr 1fr;
+}
+/*  */
+.Header_section {
+  background-color: gainsboro;
+  grid-area: Header;
+  text-align: center;
+  border-bottom: solid black;
+}
+.Sidebar_section {
+  grid-area: Sidebar;
+  border-right: dashed gainsboro;
+  height: auto;
+}
+.Main_Section {
+  grid-area: Main;
+}
+.Sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* Defining Side bar components */
+.Questions {
+  margin: 60px;
+  width: 100%;
+  text-align: center;
+}
+
+.Tags {
+  margin: 60px;
+  width: 100%;
+  text-align: center;
+}
+
+.link {
+  color: blue;
+  font-size: large;
+}
+
+/* Hover affect over the side bars */
+.Sidebar > * {
+  width: 100%;
+  box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+.Sidebar a {
+  display: block; /* Makes the anchor elements behave like block-level elements */
+  padding: 10px; /* Adjust the padding as needed for the desired size of the clickable area */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.link.active {
+  background-color: lightgrey; /* Or any other style to highlight the active link */
+  font-weight: bold;
+}
+
+/* Styling the questions panel and its content */
+.Questionpanel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.AllQuestions,
+.Askquestioncontainer {
+  display: inline-block;
+  vertical-align: top;
+}
+.Results {
+  margin: 10px;
+}
+.AllQuestions {
+  margin: 10px;
+  font-weight: bold;
+  font-size: larger;
+}
+/* Styling for the ask question button */
+.Askquestionbutton {
+  background-color: #007bff; /* blue */
+  border: 1px solid black;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Styling for Main buttons: newest, active and unanswered */
+.Buttoncontainer {
+  display: flex;
+  justify-content: space-between;
+  /*width: 300px;*/
+  /* Adjust the width as needed */
+  border: 1px solid #000;
+  width: fit-content;
+  height: fit-content;
+}
+
+.Box {
+  flex: 1;
+  text-align: center;
+  background-color: #f0f0f0;
+  border-right: 1px solid #000;
+}
+
+.Box:last-child {
+  border-right: none; /* Remove the right border for the last box. */
+}
+
+.Activebutton,
+.Newestbutton,
+.Unansweredbutton {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  /*background-color: #3498db;*/
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Styling the sorting panel */
+.Sortpanel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  border-bottom: dashed gainsboro;
+}
+/* Making sure the buttons and result numbers are inline */
+.Results,
+.Mainbuttons {
+  display: inline-block;
+}
+
+/* Styling for the question form */
+
+.Questionformbody {
+  text-align: center;
+}
+
+.form-container {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+label {
+  display: block;
+}
+
+textarea {
+  width: 100%;
+}
+
+.Postquestionbutton {
+  background-color: #007bff;
+  color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-top: 10px;
+}
+
+.required {
+  color: red;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.Postquestion,
+.Requiredtext {
+  display: inline-block;
+}
+
+.Requiredtext {
+  color: red;
+  margin-left: 50px;
+}
+
+/* Styling for displaying each question */
+.question-box {
+  border-bottom: 3px dashed gainsboro;
+  margin: 5px;
+}
+.question-title {
+  text-align: left;
+  color: #007bff;
+  cursor:pointer;
+}
+.question-tags {
+  margin-bottom: 10px;
+}
+.tags {
+  border: 2px solid black;
+  border-radius: 5px;
+  color: white;
+  background-color: gray;
+  height: fit-content;
+  margin: 5px;
+  text-align: center;
+}
+.question-ansdate {
+  display: inline-block;
+  color: gray;
+}
+.question-askedby {
+  display: inline-block;
+}
+.question-ans,
+.question-views {
+  font-size: medium;
+  color: lightslategray;
+}
+.question-ans-view {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  width: fit-content;
+}
+.question-ans-view,
+.question-title,
+.question-askedby {
+  display: inline-block;
+  margin: 10px;
+  vertical-align: top;
+}
+.question-askedby {
+  text-align: right;
+  color: red;
+}
+.question-summary{
+  font-size: smaller;
+  color: black;
+  margin: 10px;
+}
+
+/* styling for the error messages */
+.error {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: red;
+}
+.questionview {
+  margin-top: 10%;
+  margin-top: 5%;
+  font-weight: bold;
+  margin-left: 2%;
+  font-size: larger;
+}
+.questiontext {
+  display: block;
+  
+  margin-left: 20%;
+  font-size: 16px;
+  overflow-y: auto;
+  width: 50%;
+}
+#question-tags
+{
+  margin-left:20% ;
+  margin-top: 5%;
+}
+.questionaskedby {
+  margin-left: 80%;
+  color: red;
+  margin-top: -5%;
+  
+}
+.questionaskdate {
+  margin-left: 80%;
+} 
+
+  
+.answertext {
+  width: 75%;
+  margin-left: 20%;
+  margin-top: -1%;;
+  padding: 20px;
+  font-size: medium;
+}
+.ansby {
+  margin-left: 85%;
+  margin-top: -20px;
+  color:blue;
+}
+.ansdate {
+  margin-left: 85%;
+}
+.answer-box {
+  border-bottom: 3px dashed gray;
+  padding: 35px;
+  padding-bottom: 40px;
+}
+.answers-border {
+  border-top: 3px dashed gray;
+  margin-top: 40px;
+}
+.answer-button {
+  margin-left: 2%;
+  background-color: rgb(66, 158, 234);
+  color: white;
+  height: 30px;
+  font-size: medium;
+  margin-top: 3%;
+}
+.tagRow {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 5px; /* Space between rows */
+  margin-left: 20%;
+  margin-top: 5%;
+}
+
+.tagItem {
+  /* Grow to fill space, don't shrink, base width of 30% */
+  width: 200px;
+  margin-right: 5%; /* Space between items */
+  box-sizing: border-box;
+  padding: 50px;
+  border: 1px solid #ccc;
+  text-align: center;
+  margin-bottom: 20px; /* Space at the bottom of each tag */
+  border: dashed gainsboro;
+  /* added dashed border */
+}
+
+.tagName {
+  font-size: 1.2em;
+  margin-bottom: 5px; /* Space between tag name and question count */
+  color: blue;
+  cursor: pointer;
+}
+
+.tagCount {
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* Styling for search bar */
+.Searchbar {
+  /* text-align: right; */
+  text-align: right;
+  position: relative;
+  top: -50px;
+  line-height: normal;
+  right: 50px;
+}
+.tagNameButton {
+  background: none;
+  color: blue; 
+  border: none; 
+  padding: 0; 
+  font: inherit;
+  cursor: pointer;
+  text-decoration: underline;
+  display: inline;
+}
+.link {
+  background: none; 
+  border: none;
+  color: blue; 
+  cursor: pointer;
+  width:100%;
+  padding: 5px 10px; 
+  font: inherit; 
+  border-radius: 4px; 
+  margin-right: 5px; 
+  border-style: none;
+}
+
+/******************************** LANDING PAGE *************************************************************************/
+
+/******************************** LANDING PAGE *************************************************************************/
+/* StackOverflowLogin.css */
+
+.StackOverflowLogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.StackOverflowLogin_container {
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.StackOverflowLogin_header {
+  text-align: center;
+  color: #333;
+}
+
+.StackOverflowLogin_input_container {
+  margin-top: 20px;
+}
+
+.StackOverflowLogin_input {
+  margin-bottom: 15px;
+}
+
+.StackOverflowLogin_input_field {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.StackOverflowLogin_button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.StackOverflowLogin_button:hover {
+  background-color: #0056b3;
+}
+
+.StackOverflowLogin_error {
+  color: #ff0000;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* *********************************************************************************** */
+/* Signup.css */
+
+.signupform {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.Signup_container {
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Center the content horizontally */
+
+}
+
+.Signup_header {
+  text-align: center;
+  color: #333;
+}
+
+.Signup_input_container {
+  margin-top: 20px;
+
+}
+
+.Signup_input {
+  margin-bottom: 15px;
+}
+
+.Signup_input_field {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.Signup_button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+
+}
+
+.Signup_button:hover {
+  background-color: #218838;
+}
+
+.Signup_error {
+  color: #ff0000;
+  margin-top: 10px;
+  text-align: center;
+}
+
+
+
+
+/* *********************************************************************************** /
+/* Welcome.css */
+
+.Welcome_title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.Welcome_options {
+  display: flex;
+  justify-content: center;
+}
+
+.Welcome_nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.Welcome_choice {
+  margin: 20px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.Welcome_choice h2 {
+  color: #333;
+}
+
+.Welcome_choice button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.Welcome_choice button:hover {
+  background-color: #0056b3;
+}
+
+/**********************************************************************************************************************/
+/* Page number for dispay by 5 questions */
+/* Add these styles to your CSS file */
+.questions-container {
+  max-height: 250px; /* Adjust as needed */
+  overflow-y: auto;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.pagination-button {
+  background-color: #dcdcdc;
+  color: #333;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+}
+
+.pagination-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.page-number {
+  font-weight: bold;
+  margin: 0 10px;
+}
+/* Styles for the comment container */
+.comment-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 10px; /* Space between comments */
+}
+
+/* Styles for the vote section */
+.vote-section {
+  flex: 0 0 auto;
+  margin-right: 20%; /* Space between vote section and content */
+}
+
+/* Styles for the content section */
+.content-section {
+  flex-grow: 1;
+   /* Space between content and username */
+}
+
+/* Styles for the username section */
+.username-section {
+  flex: 0 0 auto;
+  margin-right:10%;
+  font-style: italic;
+  color:red;
+}
+
+/* Styles for the divider */
+.comment-divider {
+  height: 2px;
+  background-color: #000;
+  margin-top: 10px; /* Space above the divider */
+  margin-bottom: 10px; /* Space below the divider */
+}
+.divider-section {
+  margin-top: 50px; /* Space above the divider */
+  margin-bottom: 20px; /* Space below the divider */
+}
+.commentname
+{
+  color:blue;
+  font-style: italic;
+}
+
+.button-spacing {
+  margin-bottom: 5px;
+}
+.button-container {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.button-container button {
+  margin-right: 5px;
+}
+
+.button-container button:last-child {
+  margin-right: 0;
+}
+.vote-count1{
+  margin-left:2%;
+}
+/* .question-box {
+  border: 1px solid #ccc; 
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.question-box:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+} */
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  color:red;
+}
+.userPageComponent
+{
+  padding: 10px 20px; /* Top and bottom padding 10px, left and right padding 20px */
+  font-size: 16px; /* Text size */
+
+  /* Color and Background */
+  color: white; /* Text color */
+  background-color: #007bff; /* Background color */
+
+  /* Border */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+
+  /* Font */
+  font-family: Arial, sans-serif; /* Font family */
+  font-weight: bold; /* Bold text */
+
+  /* Cursor */
+  cursor: pointer; /* Mouse cursor becomes a hand icon when hovering over the button */
+
+  /* Adding some box-shadow for a subtle effect */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+
+  /* Transition for smooth effect on hover */
+  transition: background-color 0.3s, box-shadow 0.3s;
+  margin-bottom: 10px;
+  margin-left:20px;
+}
+.userProfile
+{
+  margin-left:20px;
+}
+
