@@ -8,8 +8,8 @@
 
 ## Authors
 
-- [Progga Paromita Dutta]
-- [Kamrul Hassan]
+- Progga Paromita Dutta
+- Kamrul Hassan
   
 ## Admin credentials 
 - username: **kam**
