@@ -1,16 +1,16 @@
 
 # Fake Stack Overflow
 
-This is our final project for CSE 316 fall 2023 at Stony Brook University. It is a clone of the popular website Stack Overflow.
+ This project is a clone of the popular website Stack Overflow.
 
 
 
 
 ## Authors
 
-- [Progga Paromita Dutta](https://github.com/progga004) 114751436
-- [Kamrul Hassan](https://github.com/kam-stand) 114548133
-
+- [Progga Paromita Dutta]
+- [Kamrul Hassan]
+  
 ## Admin credentials 
 - username: **kam**
 - password: **progga**
