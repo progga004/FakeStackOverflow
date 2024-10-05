@@ -89,7 +89,7 @@ npm start
 
     
 ## Contribution by team members
-### Kamrul Hassan ID: 114548133
+### Kamrul Hassan
 - Created Home page
 - Post a new Question
 - Created question form
@@ -100,7 +100,7 @@ npm start
 - README.md
 - UML diagram
 - init.js of the MongoDB
-### Progga Paromita Dutta ID: 114751436
+### Progga Paromita Dutta
 - Created answer Form
 - Created Answer Page
 - Post a new answer
